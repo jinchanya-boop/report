@@ -17,7 +17,7 @@
             height: 100%;
             width: 100%;
             font-family: 'Kanit', sans-serif;
-            background: linear-gradient(135deg, #FFF5F7 0%, #FFFBF0 100%);
+            background: linear-gradient(135deg, #F3E9F8 0%, #F8F5FF 100%);
             min-height: 100vh;
         }
 
@@ -33,7 +33,7 @@
             max-width: 600px;
             background: white;
             border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(255, 182, 193, 0.15);
+            box-shadow: 0 10px 40px rgba(186, 135, 215, 0.12);
             overflow: hidden;
             animation: slideUp 0.6s ease-out;
         }
@@ -51,7 +51,7 @@
 
         /* Header Section */
         .header {
-            background: linear-gradient(135deg, #FFE5EC 0%, #FFF0E6 100%);
+            background: linear-gradient(135deg, #E9D5F2 0%, #F0E5FF 100%);
             padding: 40px 20px;
             text-align: center;
             position: relative;
@@ -63,7 +63,7 @@
             position: absolute;
             width: 150px;
             height: 150px;
-            background: rgba(255, 192, 203, 0.2);
+            background: rgba(186, 135, 215, 0.2);
             border-radius: 50%;
             top: -50px;
             right: -50px;
@@ -74,7 +74,7 @@
             position: absolute;
             width: 100px;
             height: 100px;
-            background: rgba(255, 228, 225, 0.2);
+            background: rgba(233, 213, 242, 0.2);
             border-radius: 50%;
             bottom: -30px;
             left: -30px;
@@ -91,11 +91,11 @@
             height: 80px;
             margin: 0 auto;
             object-fit: contain;
-            filter: drop-shadow(0 4px 12px rgba(255, 105, 180, 0.2));
+            filter: drop-shadow(0 4px 12px rgba(186, 135, 215, 0.2));
         }
 
         .header h1 {
-            color: #8B5A8E;
+            color: #6B4C93;
             font-size: 28px;
             font-weight: 700;
             margin-top: 15px;
@@ -103,7 +103,7 @@
         }
 
         .header p {
-            color: #B8869E;
+            color: #9B7FB8;
             font-size: 14px;
             font-weight: 400;
             margin-top: 8px;
@@ -116,7 +116,7 @@
 
         .menu-title {
             text-align: center;
-            color: #8B5A8E;
+            color: #6B4C93;
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 30px;
@@ -139,8 +139,8 @@
         }
 
         .menu-card {
-            background: linear-gradient(135deg, #FFF8FB 0%, #FFFAF0 100%);
-            border: 2px solid #FFE5EC;
+            background: linear-gradient(135deg, #FAFBFE 0%, #F5F0F8 100%);
+            border: 2px solid #E9D5F2;
             border-radius: 16px;
             padding: 30px 20px;
             text-align: center;
@@ -162,7 +162,7 @@
             position: absolute;
             width: 120px;
             height: 120px;
-            background: rgba(255, 182, 193, 0.1);
+            background: rgba(186, 135, 215, 0.1);
             border-radius: 50%;
             top: -60px;
             right: -60px;
@@ -170,8 +170,8 @@
         }
 
         .menu-card:hover {
-            border-color: #FFB6C1;
-            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.2);
+            border-color: #D4B8E8;
+            box-shadow: 0 15px 35px rgba(186, 135, 215, 0.15);
             transform: translateY(-8px);
         }
 
@@ -199,17 +199,17 @@
         }
 
         .icon-1 {
-            color: #FFB6C1;
+            color: #D4B8E8;
         }
 
         .icon-2 {
-            color: #FFD4A3;
+            color: #C9A8E0;
         }
 
         .menu-card h2 {
             font-size: 18px;
             font-weight: 600;
-            color: #8B5A8E;
+            color: #6B4C93;
             margin-bottom: 8px;
             position: relative;
             z-index: 1;
@@ -217,7 +217,7 @@
 
         .menu-card p {
             font-size: 12px;
-            color: #B8869E;
+            color: #9B7FB8;
             font-weight: 400;
             position: relative;
             z-index: 1;
@@ -226,33 +226,53 @@
 
         /* Bottom Info Section */
         .info-section {
-            background: linear-gradient(135deg, #FFE5EC 0%, #FFF0E6 100%);
+            background: linear-gradient(135deg, #E9D5F2 0%, #F0E5FF 100%);
             padding: 25px 20px;
             text-align: center;
-            border-top: 2px solid #FFE5EC;
+            border-top: 2px solid #E9D5F2;
         }
 
         .info-text {
-            color: #8B5A8E;
+            color: #6B4C93;
             font-size: 13px;
             font-weight: 500;
             line-height: 1.6;
         }
 
         .info-text strong {
-            color: #C97BA4;
+            color: #9B5FB8;
             font-weight: 600;
         }
 
         /* Footer */
         .footer {
-            background: #FFFAF0;
-            padding: 15px 20px;
+            background: #F8F5FF;
+            padding: 20px;
             text-align: center;
-            color: #B8869E;
+            border-top: 1px solid #E9D5F2;
+        }
+
+        .footer-title {
+            color: #6B4C93;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .footer-title i {
+            font-size: 16px;
+            color: #D4B8E8;
+        }
+
+        .footer-text {
+            color: #9B7FB8;
             font-size: 12px;
             font-weight: 400;
-            border-top: 1px solid #FFE5EC;
+            line-height: 1.5;
         }
 
         /* Loading animation */
@@ -272,7 +292,7 @@
         /* Hover glow effect */
         .menu-card:hover {
             box-shadow: 
-                0 15px 35px rgba(255, 182, 193, 0.2),
+                0 15px 35px rgba(186, 135, 215, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.6);
         }
 
@@ -315,7 +335,7 @@
 
         /* Accessibility */
         .menu-card:focus {
-            outline: 3px solid #FFB6C1;
+            outline: 3px solid #D4B8E8;
             outline-offset: 2px;
         }
 
@@ -324,7 +344,7 @@
         }
 
         .menu-card:focus-visible {
-            outline: 3px solid #FFB6C1;
+            outline: 3px solid #D4B8E8;
             outline-offset: 2px;
         }
     </style>
@@ -374,7 +394,13 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>© 2024 โรงเรียนสา | สำนักงานเขตพื้นที่การศึกษา</p>
+            <div class="footer-title">
+                <i class="fas fa-code"></i>
+                <span>พัฒนาโดย งานเทคโนโลยี :: โรงเรียนสา | Saschool</span>
+            </div>
+            <div class="footer-text">
+                © 2026 ระบบรายงานการพัฒนาตนเอง
+            </div>
         </div>
     </div>
 
