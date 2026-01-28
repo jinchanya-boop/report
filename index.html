@@ -17,7 +17,7 @@
             height: 100%;
             width: 100%;
             font-family: 'Kanit', sans-serif;
-            background: linear-gradient(135deg, #F3E9F8 0%, #F8F5FF 100%);
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 50%, #5B21B6 100%);
             min-height: 100vh;
         }
 
@@ -32,8 +32,8 @@
             width: 100%;
             max-width: 600px;
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(186, 135, 215, 0.12);
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(88, 28, 135, 0.3);
             overflow: hidden;
             animation: slideUp 0.6s ease-out;
         }
@@ -51,8 +51,8 @@
 
         /* Header Section */
         .header {
-            background: linear-gradient(135deg, #E9D5F2 0%, #F0E5FF 100%);
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+            padding: 50px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -61,23 +61,23 @@
         .header::before {
             content: '';
             position: absolute;
-            width: 150px;
-            height: 150px;
-            background: rgba(186, 135, 215, 0.2);
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 50%;
-            top: -50px;
-            right: -50px;
+            top: -80px;
+            right: -80px;
         }
 
         .header::after {
             content: '';
             position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(233, 213, 242, 0.2);
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            bottom: -30px;
-            left: -30px;
+            bottom: -60px;
+            left: -60px;
         }
 
         .logo-container {
@@ -87,72 +87,77 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto;
             object-fit: contain;
-            filter: drop-shadow(0 4px 12px rgba(186, 135, 215, 0.2));
+            filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.2));
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            padding: 10px;
         }
 
         .header h1 {
-            color: #6B4C93;
-            font-size: 28px;
+            color: #FFFFFF;
+            font-size: 32px;
             font-weight: 700;
-            margin-top: 15px;
+            margin-top: 20px;
             letter-spacing: -0.5px;
         }
 
         .header p {
-            color: #9B7FB8;
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 15px;
             font-weight: 400;
-            margin-top: 8px;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
         }
 
         /* Menu Section */
         .menu-section {
-            padding: 40px 20px;
+            padding: 50px 25px;
+            background: white;
         }
 
         .menu-title {
             text-align: center;
-            color: #6B4C93;
+            color: #5B21B6;
             font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-weight: 700;
+            margin-bottom: 35px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
         }
 
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 30px;
         }
 
         @media (max-width: 480px) {
             .menu-grid {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 18px;
             }
         }
 
         .menu-card {
-            background: linear-gradient(135deg, #FAFBFE 0%, #F5F0F8 100%);
-            border: 2px solid #E9D5F2;
-            border-radius: 16px;
-            padding: 30px 20px;
+            background: linear-gradient(135deg, #F3E8FF 0%, #FAF5FF 100%);
+            border: 2.5px solid #E9D5FF;
+            border-radius: 20px;
+            padding: 35px 22px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 180px;
+            min-height: 200px;
             position: relative;
             overflow: hidden;
         }
@@ -160,119 +165,131 @@
         .menu-card::before {
             content: '';
             position: absolute;
-            width: 120px;
-            height: 120px;
-            background: rgba(186, 135, 215, 0.1);
+            width: 140px;
+            height: 140px;
+            background: rgba(124, 58, 237, 0.08);
             border-radius: 50%;
-            top: -60px;
-            right: -60px;
-            transition: all 0.3s ease;
+            top: -70px;
+            right: -70px;
+            transition: all 0.35s ease;
         }
 
         .menu-card:hover {
-            border-color: #D4B8E8;
-            box-shadow: 0 15px 35px rgba(186, 135, 215, 0.15);
-            transform: translateY(-8px);
+            border-color: #D8B4FE;
+            background: linear-gradient(135deg, #EDE9FE 0%, #FAF5FF 100%);
+            box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25);
+            transform: translateY(-12px);
         }
 
         .menu-card:hover::before {
-            width: 150px;
-            height: 150px;
-            top: -70px;
-            right: -70px;
+            width: 180px;
+            height: 180px;
+            top: -90px;
+            right: -90px;
+            background: rgba(124, 58, 237, 0.12);
         }
 
         .menu-card:active {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
         }
 
         .icon-wrapper {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 56px;
+            margin-bottom: 18px;
             position: relative;
             z-index: 1;
-            transition: transform 0.3s ease;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .menu-card:hover .icon-wrapper {
-            transform: scale(1.15) rotate(5deg);
+            transform: scale(1.2) rotate(8deg);
         }
 
         .icon-1 {
-            color: #D4B8E8;
+            color: #7C3AED;
+            background: rgba(124, 58, 237, 0.12);
+            border-radius: 50%;
         }
 
         .icon-2 {
-            color: #C9A8E0;
+            color: #6D28D9;
+            background: rgba(109, 40, 217, 0.12);
+            border-radius: 50%;
         }
 
         .menu-card h2 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #6B4C93;
-            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #5B21B6;
+            margin-bottom: 10px;
             position: relative;
             z-index: 1;
         }
 
         .menu-card p {
-            font-size: 12px;
-            color: #9B7FB8;
-            font-weight: 400;
+            font-size: 13px;
+            color: #7C3AED;
+            font-weight: 500;
             position: relative;
             z-index: 1;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         /* Bottom Info Section */
         .info-section {
-            background: linear-gradient(135deg, #E9D5F2 0%, #F0E5FF 100%);
-            padding: 25px 20px;
+            background: linear-gradient(135deg, #EDE9FE 0%, #F3E8FF 100%);
+            padding: 30px 25px;
             text-align: center;
-            border-top: 2px solid #E9D5F2;
+            border-top: 3px solid #E9D5FF;
         }
 
         .info-text {
-            color: #6B4C93;
-            font-size: 13px;
+            color: #5B21B6;
+            font-size: 14px;
             font-weight: 500;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .info-text strong {
-            color: #9B5FB8;
-            font-weight: 600;
+            color: #7C3AED;
+            font-weight: 700;
         }
 
         /* Footer */
         .footer {
-            background: #F8F5FF;
-            padding: 20px;
+            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+            padding: 25px;
             text-align: center;
-            border-top: 1px solid #E9D5F2;
+            border-top: 2px solid #E9D5FF;
         }
 
         .footer-title {
-            color: #6B4C93;
+            color: #5B21B6;
             font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-weight: 700;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
+            letter-spacing: 0.5px;
         }
 
         .footer-title i {
             font-size: 16px;
-            color: #D4B8E8;
+            color: #7C3AED;
         }
 
         .footer-text {
-            color: #9B7FB8;
+            color: #7C3AED;
             font-size: 12px;
-            font-weight: 400;
-            line-height: 1.5;
+            font-weight: 500;
+            line-height: 1.6;
         }
 
         /* Loading animation */
@@ -281,7 +298,7 @@
                 opacity: 1;
             }
             50% {
-                opacity: 0.6;
+                opacity: 0.7;
             }
         }
 
@@ -292,51 +309,60 @@
         /* Hover glow effect */
         .menu-card:hover {
             box-shadow: 
-                0 15px 35px rgba(186, 135, 215, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+                0 20px 50px rgba(124, 58, 237, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
         }
 
         /* Mobile optimization */
         @media (max-width: 480px) {
             .container {
-                border-radius: 16px;
+                border-radius: 20px;
             }
 
             .header {
-                padding: 30px 20px;
+                padding: 35px 20px;
             }
 
             .header h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .menu-section {
-                padding: 30px 15px;
+                padding: 35px 18px;
             }
 
             .logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .menu-card {
+                min-height: 180px;
+                padding: 30px 18px;
+                border-radius: 16px;
+            }
+
+            .icon-wrapper {
+                font-size: 48px;
                 width: 70px;
                 height: 70px;
             }
 
-            .menu-card {
-                min-height: 160px;
-                padding: 25px 15px;
-            }
-
-            .icon-wrapper {
-                font-size: 40px;
-            }
-
             .menu-card h2 {
-                font-size: 16px;
+                font-size: 18px;
+            }
+
+            .menu-title {
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                margin-bottom: 28px;
             }
         }
 
         /* Accessibility */
         .menu-card:focus {
-            outline: 3px solid #D4B8E8;
-            outline-offset: 2px;
+            outline: 3px solid #7C3AED;
+            outline-offset: 3px;
         }
 
         .menu-card:focus:not(:focus-visible) {
@@ -344,8 +370,8 @@
         }
 
         .menu-card:focus-visible {
-            outline: 3px solid #D4B8E8;
-            outline-offset: 2px;
+            outline: 3px solid #7C3AED;
+            outline-offset: 3px;
         }
     </style>
 </head>
