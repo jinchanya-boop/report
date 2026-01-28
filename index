@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบรายงานการพัฒนาตนเอง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFFBF0 100%);
+            min-height: 100vh;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(255, 182, 193, 0.15);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF0E6 100%);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 192, 203, 0.2);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 228, 225, 0.2);
+            border-radius: 50%;
+            bottom: -30px;
+            left: -30px;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 12px rgba(255, 105, 180, 0.2));
+        }
+
+        .header h1 {
+            color: #8B5A8E;
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: #B8869E;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 40px 20px;
+        }
+
+        .menu-title {
+            text-align: center;
+            color: #8B5A8E;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        .menu-card {
+            background: linear-gradient(135deg, #FFF8FB 0%, #FFFAF0 100%);
+            border: 2px solid #FFE5EC;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 182, 193, 0.1);
+            border-radius: 50%;
+            top: -60px;
+            right: -60px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-card:hover {
+            border-color: #FFB6C1;
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.2);
+            transform: translateY(-8px);
+        }
+
+        .menu-card:hover::before {
+            width: 150px;
+            height: 150px;
+            top: -70px;
+            right: -70px;
+        }
+
+        .menu-card:active {
+            transform: translateY(-4px);
+        }
+
+        .icon-wrapper {
+            font-size: 48px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-card:hover .icon-wrapper {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .icon-1 {
+            color: #FFB6C1;
+        }
+
+        .icon-2 {
+            color: #FFD4A3;
+        }
+
+        .menu-card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #8B5A8E;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-card p {
+            font-size: 12px;
+            color: #B8869E;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            line-height: 1.4;
+        }
+
+        /* Bottom Info Section */
+        .info-section {
+            background: linear-gradient(135deg, #FFE5EC 0%, #FFF0E6 100%);
+            padding: 25px 20px;
+            text-align: center;
+            border-top: 2px solid #FFE5EC;
+        }
+
+        .info-text {
+            color: #8B5A8E;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .info-text strong {
+            color: #C97BA4;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: #FFFAF0;
+            padding: 15px 20px;
+            text-align: center;
+            color: #B8869E;
+            font-size: 12px;
+            font-weight: 400;
+            border-top: 1px solid #FFE5EC;
+        }
+
+        /* Loading animation */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .menu-card.loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        /* Hover glow effect */
+        .menu-card:hover {
+            box-shadow: 
+                0 15px 35px rgba(255, 182, 193, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 16px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .menu-section {
+                padding: 30px 15px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .menu-card {
+                min-height: 160px;
+                padding: 25px 15px;
+            }
+
+            .icon-wrapper {
+                font-size: 40px;
+            }
+
+            .menu-card h2 {
+                font-size: 16px;
+            }
+        }
+
+        /* Accessibility */
+        .menu-card:focus {
+            outline: 3px solid #FFB6C1;
+            outline-offset: 2px;
+        }
+
+        .menu-card:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        .menu-card:focus-visible {
+            outline: 3px solid #FFB6C1;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://img2.pic.in.th/pic/sa1.png" alt="โลโก้โรงเรียนสา" class="logo">
+            </div>
+            <h1>ระบบรายงานการพัฒนาตนเอง</h1>
+            <p>โรงเรียนสา, จังหวัดน่าน</p>
+        </div>
+
+        <!-- Menu Section -->
+        <div class="menu-section">
+            <div class="menu-title">เลือกรูปแบบการเลิก</div>
+            
+            <div class="menu-grid">
+                <!-- Card 1: ID Plan -->
+                <a href="https://jinchanya-boop.github.io/IDplan/" class="menu-card" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-wrapper icon-1">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h2>ส่ง ID Plan</h2>
+                    <p>แผนการพัฒนาตนเอง</p>
+                </a>
+
+                <!-- Card 2: Development Report -->
+                <a href="#development-report" class="menu-card" onclick="goToReport(event)">
+                    <div class="icon-wrapper icon-2">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h2>ส่งรายงาน</h2>
+                    <p>รายงานการพัฒนาตนเอง</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-text">
+                <strong>หมายเหตุ:</strong> โปรดเลือกรูปแบบการเลิกและทำการบันทึกข้อมูลให้สมบูรณ์ก่อนส่งรายงาน
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 โรงเรียนสา | สำนักงานเขตพื้นที่การศึกษา</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll and navigation
+        function goToReport(event) {
+            event.preventDefault();
+            // ที่นี่คุณสามารถเพิ่ม URL ของระบบรายงานการพัฒนาตนเอง
+            alert('ระบบรายงานการพัฒนาตนเอง (อยู่ระหว่างการพัฒนา)');
+            // window.location.href = 'YOUR_REPORT_URL_HERE';
+        }
+
+        // Add ripple effect on click
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+            });
+        });
+
+        // Prevent double click
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('dblclick', function(e) {
+                e.preventDefault();
+            });
+        });
+
+        // Add loading feedback
+        window.addEventListener('beforeunload', function() {
+            document.querySelectorAll('.menu-card').forEach(card => {
+                card.classList.add('loading');
+            });
+        });
+    </script>
+</body>
+</html>
