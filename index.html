@@ -16,9 +16,9 @@
         }
 
         :root {
-            --primary-green: #4CAF50;
-            --light-green: #C8E6C9;
-            --pale-green: #E8F5E9;
+            --primary-blue: #3a47d5;
+            --light-blue: #00d2ff;
+            --pale-blue: #E3F2FD;
             --white: #FFFFFF;
             --light-gray: #F8F9FA;
             --dark-text: #4A4A4A;
@@ -37,10 +37,10 @@
 
         /* ===== HEADER ===== */
         header {
-            background: linear-gradient(135deg, #4CAF50 0%, #C8E6C9 100%);
-            padding: 30px 20px;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+            padding: 20px 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            box-shadow: 0 4px 15px rgba(58, 71, 213, 0.3);
             position: sticky;
             top: 0;
             z-index: 101;
@@ -52,12 +52,12 @@
         }
 
         .logo {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
             border-radius: 20px;
             background: white;
-            padding: 10px;
+            padding: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
@@ -68,14 +68,14 @@
         }
 
         .header-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--dark-text);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .header-subtitle {
-            font-size: 14px;
+            font-size: 13px;
             color: #666;
             font-weight: 300;
         }
@@ -86,7 +86,7 @@
             padding: 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             position: sticky;
-            top: 230px;
+            top: 165px;
             z-index: 100;
         }
 
@@ -118,13 +118,13 @@
 
         .tab-btn:hover {
             background: var(--light-gray);
-            color: var(--primary-green);
+            color: var(--primary-blue);
         }
 
         .tab-btn.active {
-            color: var(--primary-green);
-            border-bottom-color: var(--primary-green);
-            background: var(--pale-green);
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+            background: var(--pale-blue);
         }
 
         /* ===== MAIN CONTENT ===== */
@@ -177,7 +177,7 @@
 
         .section-icon {
             font-size: 32px;
-            color: var(--primary-green);
+            color: var(--primary-blue);
         }
 
         /* ===== FORM STYLES ===== */
@@ -211,9 +211,9 @@
         input:focus,
         select:focus {
             outline: none;
-            border-color: var(--primary-green);
+            border-color: var(--primary-blue);
             background: white;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+            box-shadow: 0 0 10px rgba(58, 71, 213, 0.2);
         }
 
         input[type="file"] {
@@ -233,8 +233,8 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background: var(--light-green);
-            border: 2px dashed var(--primary-green);
+            background: #B3E5FC;
+            border: 2px dashed var(--primary-blue);
             border-radius: 12px;
             padding: 30px;
             cursor: pointer;
@@ -242,7 +242,7 @@
         }
 
         .file-label:hover {
-            background: #B2DFDB;
+            background: #81D4FA;
             transform: scale(1.01);
         }
 
@@ -273,15 +273,15 @@
         }
 
         .btn-primary {
-            background: var(--primary-green);
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
             color: white;
             width: 100%;
         }
 
         .btn-primary:hover {
-            background: #66BB6A;
+            background: linear-gradient(90deg, #3a47d5 0%, #00d2ff 100%);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+            box-shadow: 0 6px 20px rgba(58, 71, 213, 0.4);
         }
 
         .btn-success {
@@ -333,7 +333,7 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+            background: linear-gradient(135deg, #B3E5FC 0%, var(--white) 100%);
             padding: 25px;
             border-radius: 15px;
             text-align: center;
@@ -343,13 +343,13 @@
 
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+            box-shadow: 0 8px 20px rgba(58, 71, 213, 0.3);
         }
 
         .stat-number {
             font-size: 36px;
             font-weight: 700;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             margin: 10px 0;
         }
 
@@ -378,7 +378,7 @@
         }
 
         table thead {
-            background: var(--light-green);
+            background: #B3E5FC;
             color: var(--dark-text);
         }
 
@@ -468,18 +468,18 @@
 
         .close:hover,
         .close:focus {
-            color: var(--primary-green);
+            color: var(--primary-blue);
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .header-title {
-                font-size: 20px;
+                font-size: 18px;
             }
 
             .logo {
-                width: 120px;
-                height: 120px;
+                width: 80px;
+                height: 80px;
             }
 
             section {
@@ -511,12 +511,12 @@
 
         @media (max-width: 480px) {
             .header-title {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             .logo {
-                width: 100px;
-                height: 100px;
+                width: 70px;
+                height: 70px;
             }
 
             .tab-container {
@@ -602,14 +602,14 @@
 
         .search-box input:focus {
             outline: none;
-            border-color: var(--primary-green);
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 10px rgba(58, 71, 213, 0.2);
         }
 
         .search-box i {
             position: absolute;
             left: 12px;
-            color: var(--primary-green);
+            color: var(--primary-blue);
             pointer-events: none;
         }
 
@@ -639,8 +639,8 @@
 
         .filter-box select:focus {
             outline: none;
-            border-color: var(--primary-green);
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 10px rgba(58, 71, 213, 0.2);
         }
 
         /* ===== RESPONSIVE SEARCH ===== */
@@ -677,7 +677,7 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background: linear-gradient(135deg, #4CAF50 0%, #C8E6C9 100%);
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
             color: var(--dark-text);
             text-align: center;
             padding: 30px 20px;
@@ -1002,7 +1002,7 @@
 
     <script>
         // Google Sheets และ Drive Configuration
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz63b4GzUkcidlSsPqqp35E4zvCQqU3vmakI7J5qEVXXb_PI-fWe34qdSTA1F_NGZRMfg/exec'; // จะสร้างให้ในขั้นตอนถัดไป
+        const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE'; // จะสร้างให้ในขั้นตอนถัดไป
         const SHEET_ID = '1PBAvnSnjN-SKQlVf4L2eNNW-yrmf2kG0GKHJcs6XMQU';
         const FOLDER_ID = '17VnpmtyC86pHnSh84xyNCfTW4k2TMMmx';
         const ADMIN_PASSWORD = 'admin999';
@@ -1116,7 +1116,7 @@
                                         title: 'สำเร็จ!',
                                         text: 'ส่งรายงานการพัฒนาตนเองเรียบร้อยแล้ว',
                                         icon: 'success',
-                                        confirmButtonColor: '#4CAF50'
+                                        confirmButtonColor: '#3a47d5'
                                     });
 
                                     document.getElementById('reportForm').reset();
@@ -1205,7 +1205,7 @@
                     <td><span class="status-badge ${statusClass}">${status}</span></td>
                     <td>${row.adminComment ? `<small>${row.adminComment}</small>` : '-'}</td>
                     <td>
-                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: var(--primary-green); text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
+                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -1237,7 +1237,7 @@
                     <td>${row.reportType || '-'}</td>
                     <td>${formatDate(row.timestamp) || '-'}</td>
                     <td>
-                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: var(--primary-green); text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
+                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
                     <td><span class="status-badge ${statusClass}">${status}</span></td>
                     <td>
@@ -1301,7 +1301,7 @@
                     labels: ['On-Site', 'On-Line'],
                     datasets: [{
                         data: [onSite, onLine],
-                        backgroundColor: ['#81C784', '#64B5F6'],
+                        backgroundColor: ['#00d2ff', '#3a47d5'],
                         borderColor: '#ffffff',
                         borderWidth: 3
                     }]
@@ -1343,8 +1343,8 @@
                     datasets: [{
                         label: 'จำนวนการส่ง',
                         data: subjects.map(s => subjectCounts[s]),
-                        backgroundColor: '#81C784',
-                        borderColor: '#66BB6A',
+                        backgroundColor: '#64B5F6',
+                        borderColor: '#3a47d5',
                         borderWidth: 2,
                         borderRadius: 8
                     }]
@@ -1403,7 +1403,7 @@
                     <td><span class="status-badge ${statusClass}">${status}</span></td>
                     <td>${row.adminComment ? `<small>${row.adminComment}</small>` : '-'}</td>
                     <td>
-                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: var(--primary-green); text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
+                        ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
                 `;
                 tbody.appendChild(tr);
