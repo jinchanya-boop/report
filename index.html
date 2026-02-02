@@ -955,7 +955,6 @@
                                 <th>สถานะ</th>
                                 <th>ความเห็น</th>
                                 <th>ไฟล์</th>
-                                <th>โฟลเดอร์</th>
                             </tr>
                         </thead>
                         <tbody id="dashboardTableBody">
@@ -1209,9 +1208,6 @@
                     <td>
                         ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
-                    <td>
-                        ${row.folderUrl ? `<a href="${row.folderUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-folder-open"></i></a>` : '-'}
-                    </td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -1412,9 +1408,6 @@
                     <td>${row.adminComment ? `<small>${row.adminComment}</small>` : '-'}</td>
                     <td>
                         ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
-                    </td>
-                    <td>
-                        ${row.folderUrl ? `<a href="${row.folderUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-folder-open"></i></a>` : '-'}
                     </td>
                 `;
                 tbody.appendChild(tr);
