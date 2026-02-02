@@ -104,7 +104,7 @@
             background: transparent;
             color: var(--dark-text);
             cursor: pointer;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             font-family: 'Kanit', sans-serif;
             transition: all 0.3s ease;
@@ -717,6 +717,9 @@
             <button class="tab-btn active" data-tab="submitSection" onclick="switchTab(event, 'submitSection')">
                 <i class="fas fa-paper-plane"></i> <span>ส่งงาน</span>
             </button>
+            <button class="tab-btn" data-tab="formSection" onclick="switchTab(event, 'formSection')">
+                <i class="fas fa-file-download"></i> <span>แบบฟอร์มรายงาน</span>
+            </button>
             <button class="tab-btn" data-tab="adminSection" onclick="switchTab(event, 'adminSection')">
                 <i class="fas fa-lock"></i> <span>เข้าสู่ระบบผู้บริหาร</span>
             </button>
@@ -786,7 +789,70 @@
             </section>
         </div>
 
-        <!-- ===== TAB 2: ADMIN LOGIN & REVIEW ===== -->
+        <!-- ===== TAB 2: FORM DOWNLOAD ===== -->
+        <div id="formSection" class="tab-content">
+            <section>
+                <div class="section-title">
+                    <i class="fas fa-file-download section-icon"></i>
+                    ดาวน์โหลดแบบฟอร์มรายงาน
+                </div>
+
+                <!-- On-Site Form -->
+                <div style="background: linear-gradient(135deg, #B3E5FC 0%, #FFFFFF 100%); padding: 30px; border-radius: 15px; margin-bottom: 30px; border: 2px solid var(--border-color);">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-building"></i>
+                        แบบฟอร์มรายงาน On-Site (พัฒนาในสถานที่)
+                    </h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                        ใช้สำหรับรายงานการพัฒนาตนเองแบบ On-Site เช่น การอบรม สัมมนา ประชุมเชิงปฏิบัติการ ณ สถานที่จริง
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="LINK_PDF_ONSITE_HERE" target="_blank" class="btn btn-danger" style="width: auto;">
+                            <i class="fas fa-file-pdf"></i> ดาวน์โหลด PDF
+                        </a>
+                        <a href="LINK_WORD_ONSITE_HERE" target="_blank" class="btn btn-primary" style="width: auto; background: linear-gradient(90deg, #2B5797 0%, #4472C4 100%);">
+                            <i class="fas fa-file-word"></i> ดาวน์โหลด Word
+                        </a>
+                    </div>
+                </div>
+
+                <!-- On-Line Form -->
+                <div style="background: linear-gradient(135deg, #C8E6C9 0%, #FFFFFF 100%); padding: 30px; border-radius: 15px; margin-bottom: 30px; border: 2px solid var(--border-color);">
+                    <h3 style="color: #4CAF50; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-laptop"></i>
+                        แบบฟอร์มรายงาน On-Line (พัฒนาออนไลน์)
+                    </h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.8;">
+                        ใช้สำหรับรายงานการพัฒนาตนเองแบบ On-Line เช่น การอบรมออนไลน์ Webinar E-Learning หรือการเรียนรู้ผ่านสื่อดิจิทัล
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="LINK_PDF_ONLINE_HERE" target="_blank" class="btn btn-danger" style="width: auto;">
+                            <i class="fas fa-file-pdf"></i> ดาวน์โหลด PDF
+                        </a>
+                        <a href="LINK_WORD_ONLINE_HERE" target="_blank" class="btn btn-primary" style="width: auto; background: linear-gradient(90deg, #2B5797 0%, #4472C4 100%);">
+                            <i class="fas fa-file-word"></i> ดาวน์โหลด Word
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div style="background: #FFF3CD; padding: 25px; border-radius: 15px; border-left: 5px solid #FFD97D;">
+                    <h4 style="color: #856404; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-info-circle"></i>
+                        คำแนะนำการใช้งาน
+                    </h4>
+                    <ul style="color: #666; line-height: 2; padding-left: 20px;">
+                        <li>เลือกดาวน์โหลดแบบฟอร์มที่ต้องการ (On-Site หรือ On-Line)</li>
+                        <li>เลือกไฟล์ PDF หรือ Word ตามความสะดวก</li>
+                        <li>กรอกข้อมูลในแบบฟอร์มให้ครบถ้วน</li>
+                        <li>บันทึกเป็นไฟล์ PDF</li>
+                        <li>อัพโหลดผ่านเมนู <strong>"ส่งงาน"</strong></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===== TAB 3: ADMIN LOGIN & REVIEW ===== -->
         <div id="adminSection" class="tab-content">
             <section id="adminLoginForm">
                 <div class="section-title">
@@ -841,7 +907,7 @@
             </section>
         </div>
 
-        <!-- ===== TAB 3: DASHBOARD ===== -->
+        <!-- ===== TAB 4: DASHBOARD ===== -->
         <div id="dashboardSection" class="tab-content">
             <!-- Statistics Section -->
             <section>
