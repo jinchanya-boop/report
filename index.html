@@ -828,6 +828,7 @@
                                 <th>ประเภท</th>
                                 <th>วันที่ส่ง</th>
                                 <th>ไฟล์</th>
+                                <th>โฟลเดอร์</th>
                                 <th>สถานะ</th>
                                 <th>จัดการ</th>
                             </tr>
@@ -954,6 +955,7 @@
                                 <th>สถานะ</th>
                                 <th>ความเห็น</th>
                                 <th>ไฟล์</th>
+                                <th>โฟลเดอร์</th>
                             </tr>
                         </thead>
                         <tbody id="dashboardTableBody">
@@ -1207,6 +1209,9 @@
                     <td>
                         ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
+                    <td>
+                        ${row.folderUrl ? `<a href="${row.folderUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-folder-open"></i></a>` : '-'}
+                    </td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -1238,6 +1243,9 @@
                     <td>${formatDate(row.timestamp) || '-'}</td>
                     <td>
                         ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
+                    </td>
+                    <td>
+                        ${row.folderUrl ? `<a href="${row.folderUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-folder-open"></i></a>` : '-'}
                     </td>
                     <td><span class="status-badge ${statusClass}">${status}</span></td>
                     <td>
@@ -1405,6 +1413,9 @@
                     <td>
                         ${row.fileUrl ? `<a href="${row.fileUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-download"></i></a>` : '-'}
                     </td>
+                    <td>
+                        ${row.folderUrl ? `<a href="${row.folderUrl}" target="_blank" style="color: #3a47d5; text-decoration: none;"><i class="fas fa-folder-open"></i></a>` : '-'}
+                    </td>
                 `;
                 tbody.appendChild(tr);
             });
@@ -1452,6 +1463,7 @@
                 <p><strong>ประเภทรายงาน:</strong> ${row.reportType}</p>
                 <p><strong>วันที่ส่ง:</strong> ${formatDate(row.timestamp)}</p>
                 <p><strong>ไฟล์:</strong> <a href="${row.fileUrl}" target="_blank">${row.fileName}</a></p>
+                <p><strong>โฟลเดอร์:</strong> <a href="${row.folderUrl}" target="_blank" style="color: #3a47d5;">เปิดโฟลเดอร์ <i class="fas fa-folder-open"></i></a></p>
                 <hr style="border: none; border-top: 2px solid var(--border-color); margin: 15px 0;">
             `;
 
